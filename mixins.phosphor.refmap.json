@@ -1,0 +1,123 @@
+{
+  "mappings": {
+    "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinAnvilChunkLoader": {
+      "writeChunkToNBT": "Lnet/minecraft/world/chunk/storage/AnvilChunkLoader;func_75820_a(Lnet/minecraft/world/chunk/Chunk;Lnet/minecraft/world/World;Lnet/minecraft/nbt/NBTTagCompound;)V",
+      "saveChunk": "Lnet/minecraft/world/chunk/storage/AnvilChunkLoader;func_75816_a(Lnet/minecraft/world/World;Lnet/minecraft/world/chunk/Chunk;)V",
+      "readChunkFromNBT": "Lnet/minecraft/world/chunk/storage/AnvilChunkLoader;func_75823_a(Lnet/minecraft/world/World;Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/world/chunk/Chunk;"
+    },
+    "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinWorld": {
+      "checkLightFor": "Lnet/minecraft/world/World;func_180500_c(Lnet/minecraft/world/EnumSkyBlock;Lnet/minecraft/util/math/BlockPos;)Z"
+    },
+    "me/jellysquid/mods/phosphor/mixins/lighting/client/MixinMinecraft": {
+      "runTick": "Lnet/minecraft/client/Minecraft;func_71407_l()V"
+    },
+    "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinChunk$Vanilla": {
+      "Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;set(IIILnet/minecraft/block/state/IBlockState;)V": "Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;func_177484_a(IIILnet/minecraft/block/state/IBlockState;)V",
+      "Lnet/minecraft/world/chunk/Chunk;propagateSkylightOcclusion(II)V": "Lnet/minecraft/world/chunk/Chunk;func_76595_e(II)V",
+      "setBlockState(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;)Lnet/minecraft/block/state/IBlockState;": "Lnet/minecraft/world/chunk/Chunk;func_177436_a(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;)Lnet/minecraft/block/state/IBlockState;",
+      "Lnet/minecraft/world/chunk/Chunk;storageArrays:[Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;": "Lnet/minecraft/world/chunk/Chunk;field_76652_q:[Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;",
+      "Lnet/minecraft/world/chunk/Chunk;relightBlock(III)V": "Lnet/minecraft/world/chunk/Chunk;func_76615_h(III)V"
+    },
+    "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinChunk$Sponge": {
+      "Lnet/minecraft/world/chunk/Chunk;generateSkylightMap()V": "Lnet/minecraft/world/chunk/Chunk;func_76603_b()V",
+      "Lnet/minecraft/world/chunk/Chunk;propagateSkylightOcclusion(II)V": "Lnet/minecraft/world/chunk/Chunk;func_76595_e(II)V",
+      "Lnet/minecraft/world/chunk/Chunk;relightBlock(III)V": "Lnet/minecraft/world/chunk/Chunk;func_76615_h(III)V",
+      "Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;get(III)Lnet/minecraft/block/state/IBlockState;": "Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;func_177485_a(III)Lnet/minecraft/block/state/IBlockState;"
+    },
+    "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinSPacketChunkData": {
+      "calculateChunkSize": "Lnet/minecraft/network/play/server/SPacketChunkData;func_189556_a(Lnet/minecraft/world/chunk/Chunk;ZI)I"
+    },
+    "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinChunk": {
+      "Lnet/minecraft/world/chunk/Chunk;generateSkylightMap()V": "Lnet/minecraft/world/chunk/Chunk;func_76603_b()V",
+      "setLightFor": "Lnet/minecraft/world/chunk/Chunk;func_177431_a(Lnet/minecraft/world/EnumSkyBlock;Lnet/minecraft/util/math/BlockPos;I)V",
+      "onLoad": "Lnet/minecraft/world/chunk/Chunk;func_76631_c()V",
+      "getLightSubtracted": "Lnet/minecraft/world/chunk/Chunk;func_177443_a(Lnet/minecraft/util/math/BlockPos;I)I"
+    },
+    "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinChunkProviderServer": {
+      "saveChunks": "Lnet/minecraft/world/gen/ChunkProviderServer;func_186027_a(Z)Z",
+      "tick": "Lnet/minecraft/world/gen/ChunkProviderServer;func_73156_b()Z"
+    }
+  },
+  "data": {
+    "notch": {
+      "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinAnvilChunkLoader": {
+        "writeChunkToNBT": "Laye;a(Laxw;Lamu;Lfy;)V",
+        "saveChunk": "Laye;a(Lamu;Laxw;)V",
+        "readChunkFromNBT": "Laye;a(Lamu;Lfy;)Laxw;"
+      },
+      "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinWorld": {
+        "checkLightFor": "Lamu;c(Lana;Let;)Z"
+      },
+      "me/jellysquid/mods/phosphor/mixins/lighting/client/MixinMinecraft": {
+        "runTick": "Lbib;t()V"
+      },
+      "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinChunk$Vanilla": {
+        "Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;set(IIILnet/minecraft/block/state/IBlockState;)V": "Laxx;a(IIILawt;)V",
+        "Lnet/minecraft/world/chunk/Chunk;propagateSkylightOcclusion(II)V": "Laxw;d(II)V",
+        "setBlockState(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;)Lnet/minecraft/block/state/IBlockState;": "Laxw;a(Let;Lawt;)Lawt;",
+        "Lnet/minecraft/world/chunk/Chunk;storageArrays:[Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;": "Laxw;f:[Laxx;",
+        "Lnet/minecraft/world/chunk/Chunk;relightBlock(III)V": "Laxw;c(III)V",
+        "net/minecraft/world/chunk/storage/ExtendedBlockStorage": "axx"
+      },
+      "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinChunk$Sponge": {
+        "Lnet/minecraft/world/chunk/Chunk;generateSkylightMap()V": "Laxw;b()V",
+        "Lnet/minecraft/world/chunk/Chunk;propagateSkylightOcclusion(II)V": "Laxw;d(II)V",
+        "Lnet/minecraft/world/chunk/Chunk;relightBlock(III)V": "Laxw;c(III)V",
+        "Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;get(III)Lnet/minecraft/block/state/IBlockState;": "Laxx;a(III)Lawt;",
+        "net/minecraft/world/chunk/storage/ExtendedBlockStorage": "axx"
+      },
+      "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinSPacketChunkData": {
+        "calculateChunkSize": "Lje;a(Laxw;ZI)I"
+      },
+      "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinChunk": {
+        "Lnet/minecraft/world/chunk/Chunk;generateSkylightMap()V": "Laxw;b()V",
+        "setLightFor": "Laxw;a(Lana;Let;I)V",
+        "onLoad": "Laxw;c()V",
+        "getLightSubtracted": "Laxw;a(Let;I)I"
+      },
+      "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinChunkProviderServer": {
+        "saveChunks": "Lon;a(Z)Z",
+        "tick": "Lon;d()Z"
+      }
+    },
+    "searge": {
+      "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinAnvilChunkLoader": {
+        "writeChunkToNBT": "Lnet/minecraft/world/chunk/storage/AnvilChunkLoader;func_75820_a(Lnet/minecraft/world/chunk/Chunk;Lnet/minecraft/world/World;Lnet/minecraft/nbt/NBTTagCompound;)V",
+        "saveChunk": "Lnet/minecraft/world/chunk/storage/AnvilChunkLoader;func_75816_a(Lnet/minecraft/world/World;Lnet/minecraft/world/chunk/Chunk;)V",
+        "readChunkFromNBT": "Lnet/minecraft/world/chunk/storage/AnvilChunkLoader;func_75823_a(Lnet/minecraft/world/World;Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/world/chunk/Chunk;"
+      },
+      "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinWorld": {
+        "checkLightFor": "Lnet/minecraft/world/World;func_180500_c(Lnet/minecraft/world/EnumSkyBlock;Lnet/minecraft/util/math/BlockPos;)Z"
+      },
+      "me/jellysquid/mods/phosphor/mixins/lighting/client/MixinMinecraft": {
+        "runTick": "Lnet/minecraft/client/Minecraft;func_71407_l()V"
+      },
+      "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinChunk$Vanilla": {
+        "Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;set(IIILnet/minecraft/block/state/IBlockState;)V": "Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;func_177484_a(IIILnet/minecraft/block/state/IBlockState;)V",
+        "Lnet/minecraft/world/chunk/Chunk;propagateSkylightOcclusion(II)V": "Lnet/minecraft/world/chunk/Chunk;func_76595_e(II)V",
+        "setBlockState(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;)Lnet/minecraft/block/state/IBlockState;": "Lnet/minecraft/world/chunk/Chunk;func_177436_a(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;)Lnet/minecraft/block/state/IBlockState;",
+        "Lnet/minecraft/world/chunk/Chunk;storageArrays:[Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;": "Lnet/minecraft/world/chunk/Chunk;field_76652_q:[Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;",
+        "Lnet/minecraft/world/chunk/Chunk;relightBlock(III)V": "Lnet/minecraft/world/chunk/Chunk;func_76615_h(III)V"
+      },
+      "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinChunk$Sponge": {
+        "Lnet/minecraft/world/chunk/Chunk;generateSkylightMap()V": "Lnet/minecraft/world/chunk/Chunk;func_76603_b()V",
+        "Lnet/minecraft/world/chunk/Chunk;propagateSkylightOcclusion(II)V": "Lnet/minecraft/world/chunk/Chunk;func_76595_e(II)V",
+        "Lnet/minecraft/world/chunk/Chunk;relightBlock(III)V": "Lnet/minecraft/world/chunk/Chunk;func_76615_h(III)V",
+        "Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;get(III)Lnet/minecraft/block/state/IBlockState;": "Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;func_177485_a(III)Lnet/minecraft/block/state/IBlockState;"
+      },
+      "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinSPacketChunkData": {
+        "calculateChunkSize": "Lnet/minecraft/network/play/server/SPacketChunkData;func_189556_a(Lnet/minecraft/world/chunk/Chunk;ZI)I"
+      },
+      "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinChunk": {
+        "Lnet/minecraft/world/chunk/Chunk;generateSkylightMap()V": "Lnet/minecraft/world/chunk/Chunk;func_76603_b()V",
+        "setLightFor": "Lnet/minecraft/world/chunk/Chunk;func_177431_a(Lnet/minecraft/world/EnumSkyBlock;Lnet/minecraft/util/math/BlockPos;I)V",
+        "onLoad": "Lnet/minecraft/world/chunk/Chunk;func_76631_c()V",
+        "getLightSubtracted": "Lnet/minecraft/world/chunk/Chunk;func_177443_a(Lnet/minecraft/util/math/BlockPos;I)I"
+      },
+      "me/jellysquid/mods/phosphor/mixins/lighting/common/MixinChunkProviderServer": {
+        "saveChunks": "Lnet/minecraft/world/gen/ChunkProviderServer;func_186027_a(Z)Z",
+        "tick": "Lnet/minecraft/world/gen/ChunkProviderServer;func_73156_b()Z"
+      }
+    }
+  }
+}
